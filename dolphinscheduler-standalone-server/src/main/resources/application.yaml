@@ -17,7 +17,7 @@
 
 spring:
   profiles:
-    active: h2
+    active: mysql
   jackson:
     time-zone: UTC
     date-format: "yyyy-MM-dd HH:mm:ss"
@@ -214,7 +214,7 @@ worker:
   # worker host weight to dispatch tasks, default value 100
   host-weight: 100
   server-load-protection:
-    enabled: true
+    enabled: false
     # Worker max cpu usage, when the worker's cpu usage is smaller then this value, worker server can be dispatched tasks.
     max-cpu-usage-percentage-thresholds: 0.9
     # Worker max JVM memory usage , when the worker's jvm memory usage is smaller then this value, worker server can be dispatched tasks.
@@ -340,4 +340,4 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/dolphinscheduler?useUnicode=true&characterEncoding=UTF-8
     username: root
-    password: root@123
+    password: 123456

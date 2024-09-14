@@ -55,8 +55,8 @@ public abstract class BaseHeartBeatTask<T extends HeartBeat> extends BaseDaemonT
         while (runningFlag) {
             try {
                 if (!ServerLifeCycleManager.isRunning()) {
-                    log.info("The current server status is {}, will not write heartBeatInfo into registry",
-                            ServerLifeCycleManager.getServerStatus());
+//                    log.info("The current server status is {}, will not write heartBeatInfo into registry",
+//                            ServerLifeCycleManager.getServerStatus());
                     continue;
                 }
                 T heartBeat = getHeartBeat();
